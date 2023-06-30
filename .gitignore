@@ -1,22 +1,38 @@
-bin
-target
-.settings
-.project
-.classpath
-.svn
-.log
-rebel.xml
-logs
+target/
+!.mvn/wrapper/maven-wrapper.jar
+!**/src/main/**/target/
+!**/src/test/**/target/
 
+### IntelliJ IDEA ###
+.idea/modules.xml
+.idea/jarRepositories.xml
+.idea/compiler.xml
+.idea/libraries/
+*.iws
 *.iml
-/out
-/.idea/ant.xml
-/.idea/misc.xml
-/.idea/workspace.xml
-/.idea/modules.xml
-/.idea/compiler.xml
-/.idea/libraries/Maven*.xml
-/.idea/artifacts/*.xml
-/*.iws
+*.ipr
 
-web
+### Eclipse ###
+.apt_generated
+.classpath
+.factorypath
+.project
+.settings
+.springBeans
+.sts4-cache
+
+### NetBeans ###
+/nbproject/private/
+/nbbuild/
+/dist/
+/nbdist/
+/.nb-gradle/
+build/
+!**/src/main/**/build/
+!**/src/test/**/build/
+
+### VS Code ###
+.vscode/
+
+### Mac OS ###
+.DS_Store
