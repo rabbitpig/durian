@@ -28,8 +28,6 @@ import java.io.IOException;
 import java.util.*;
 
 /**
- * @author ajia.zjj
- * @date 2018/02/24
  */
 public class MysqlBasePlugin extends PluginAdapter {
 

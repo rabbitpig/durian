@@ -12,9 +12,6 @@ import java.sql.SQLException;
 
 /**
  * JSON处理
- *
- * @param <E>
- * @author ajia.zjj
  */
 public class JsonValueTypeHandler<E extends Object> extends BaseTypeHandler<E> {
 

@@ -12,9 +12,6 @@ import java.util.Map;
 
 /**
  * 枚举处理
- *
- * @param <E>
- * @author ajia.zjj
  */
 public class EnumValueTypeHandler<E extends BaseEnum> extends BaseTypeHandler<E> {
     private Map<Integer, E> enumMap = new HashMap<>();
