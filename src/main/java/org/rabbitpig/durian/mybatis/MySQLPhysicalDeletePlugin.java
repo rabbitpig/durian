@@ -14,9 +14,8 @@
  * limitations under the License.
  */
 
-package com.cmcc.coc.ummp.common.common.mybatis;
+package org.rabbitpig.durian.mybatis;
 
-import com.cmcc.coc.ummp.common.common.baseclass.Id;
 import org.mybatis.generator.api.*;
 import org.mybatis.generator.api.dom.java.*;
 import org.mybatis.generator.api.dom.xml.*;
@@ -435,7 +434,7 @@ public class MySQLPhysicalDeletePlugin extends MysqlBasePlugin {
     @Override
     public boolean modelBaseRecordClassGenerated(TopLevelClass topLevelClass, IntrospectedTable introspectedTable) {
         //给DO增加默认接口
-        FullyQualifiedJavaType baseDoType = new FullyQualifiedJavaType(com.cmcc.coc.ummp.common.common.baseclass.BaseModel.class.getName());
+        FullyQualifiedJavaType baseDoType = new FullyQualifiedJavaType(BaseModel.class.getName());
         topLevelClass.addImportedType(baseDoType);
         topLevelClass.setSuperClass(baseDoType);
 

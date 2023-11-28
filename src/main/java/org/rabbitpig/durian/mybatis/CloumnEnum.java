@@ -19,6 +19,12 @@ package org.rabbitpig.durian.mybatis;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 
+/**
+ * 列类型枚举
+ *
+ * @author jj
+ */
+@Getter
 @AllArgsConstructor
 public enum CloumnEnum {
     // ID
@@ -38,9 +44,7 @@ public enum CloumnEnum {
     // 逻辑删除标识
     IS_DELETED("deleted", "deleted");
 
-    @Getter
-    private String clazz;
+    private final String clazz;
 
-    @Getter
-    private String sql;
+    private final String sql;
 }

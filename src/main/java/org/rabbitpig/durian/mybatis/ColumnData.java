@@ -19,6 +19,10 @@ package org.rabbitpig.durian.mybatis;
 import java.util.HashMap;
 import java.util.Map;
 
+/**
+ * 列类型
+ * @author jj
+ */
 public class ColumnData {
 
     private String dbName;

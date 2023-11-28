@@ -14,9 +14,8 @@
  * limitations under the License.
  */
 
-package com.cmcc.coc.ummp.common.common.mybatis;
+package org.rabbitpig.durian.mybatis;
 
-import com.cmcc.coc.ummp.common.common.baseclass.Id;
 import com.google.common.collect.Sets;
 import org.apache.commons.lang3.StringUtils;
 import org.mybatis.generator.api.GeneratedJavaFile;
@@ -44,6 +43,8 @@ import java.io.IOException;
 import java.util.*;
 
 /**
+ * 插件基类
+ * @author jj
  */
 public class MysqlBasePlugin extends PluginAdapter {
 
@@ -51,7 +52,7 @@ public class MysqlBasePlugin extends PluginAdapter {
     static Set<String> BASE_MODEL_FIELDS_SET = Sets.newHashSet();
     static Set<String> BASE_MODEL_METHODS_SET = Sets.newHashSet();
 
-    static String FULLY_QUALIFIED_PAGE = com.cmcc.coc.ummp.common.common.bean.Page.class.getName();
+    static String FULLY_QUALIFIED_PAGE =  Page.class.getName();
     static String XMLFILE_POSTFIX = "Ext";
     static String JAVAFILE_POTFIX = "Ext";
     static String ANNOTATION_RESOURCE = "org.apache.ibatis.annotations.Mapper";
@@ -184,7 +185,7 @@ public class MysqlBasePlugin extends PluginAdapter {
         FullyQualifiedJavaType managerInterfaceType = new FullyQualifiedJavaType(managerInterface);
         Interface interfaze = new Interface(managerInterfaceType);
         interfaze.setVisibility(JavaVisibility.PUBLIC);
-        FullyQualifiedJavaType iBaseManager = new FullyQualifiedJavaType(com.cmcc.coc.ummp.common.common.baseclass.IBaseManager.class.getName());
+        FullyQualifiedJavaType iBaseManager = new FullyQualifiedJavaType(IBaseManager.class.getName());
         iBaseManager.addTypeArgument(modelType);
         interfaze.addImportedType(iBaseManager);
         interfaze.addSuperInterface(iBaseManager);
@@ -195,7 +196,7 @@ public class MysqlBasePlugin extends PluginAdapter {
         topLevelClass.setVisibility(JavaVisibility.PUBLIC);
         topLevelClass.addAnnotation("@Service");
         topLevelClass.addImportedType(new FullyQualifiedJavaType("org.springframework.stereotype.Service"));
-        FullyQualifiedJavaType baseManager = new FullyQualifiedJavaType(com.cmcc.coc.ummp.common.common.baseclass.BaseManager.class.getName());
+        FullyQualifiedJavaType baseManager = new FullyQualifiedJavaType(BaseManager.class.getName());
         baseManager.addTypeArgument(modelType);
         topLevelClass.addImportedType(baseManager);
         topLevelClass.setSuperClass(baseManager);

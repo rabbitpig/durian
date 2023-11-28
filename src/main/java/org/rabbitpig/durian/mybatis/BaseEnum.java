@@ -18,6 +18,7 @@ package org.rabbitpig.durian.mybatis;
 
 /**
  * 枚举基类
+ * @author jj
  */
 public interface BaseEnum {
     int getValue();

@@ -14,11 +14,13 @@
  * limitations under the License.
  */
 
-package com.cmcc.coc.ummp.common.common.baseclass;
+package org.rabbitpig.durian.mybatis;
 
 import java.lang.annotation.*;
 
 /**
+ * ID注解
+ * @author jj
  */
 @Target(ElementType.FIELD)
 @Retention(RetentionPolicy.RUNTIME)
